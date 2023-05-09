@@ -14,7 +14,17 @@
         android:id="@+id/settingsTwoFragment"
         android:name="com.nokhyun.settings.SettingsTwoFragment"
         tools:layout="@layout/fragment_settings_two">
+        <argument
+            android:name="id"
+            app:argType="integer" />
 
-        <deepLink app:uri="android-app://example.google.app/settingsTwoFragment" />
+        <argument
+            android:name="myarg"
+            app:argType="string" />
+
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <deepLink app:uri="android-app://example.google.app/settingsTwoFragment/id={id}?myarg={myarg}?name={name}" />
     </fragment>
 </navigation>

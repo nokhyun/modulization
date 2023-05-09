@@ -24,7 +24,7 @@ class HomeFragment : Fragment() {
 
         binding?.btnSettingsTwo?.setOnClickListener {
             val request = NavDeepLinkRequest.Builder
-                .fromUri("android-app://example.google.app/settingsTwoFragment".toUri())
+                .fromUri("android-app://example.google.app/settingsTwoFragment/id=4?myarg=${"aa"}?name=${"Kim"}}".toUri())
                 .build()
             findNavController().navigate(request)
         }
